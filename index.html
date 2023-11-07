@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+
+
+    <!-- Add Bootstrap Datepicker CSS and JavaScript -->
+
+
+    <title>To Do list</title>
+</head>
+
+<body>
+    <h1>Task To do</h1>
+
+
+ <div id="dataRender" >
+
+    <div class="center" id="inputContainer">
+
+        <h4 class="text-center"> Add A Task </h4>
+        <label for="title"> Task Name *</label>
+        <input name="title"  type="text" placeholder="Task Name" id="newTaskTitle" />
+        <span class="text-danger mb-2 hidden" id="task-error-name">Please Enter Task Name</span>
+    
+        <label for="description"> Task Description * </label>
+    
+        <textarea name="description" id="newTaskInfo" cols="30" rows="10" placeholder="Add Task Description Here"
+          ></textarea>
+        <span class="text-danger mb-2 hidden" id="task-error-description">please Enter Task Description </span>
+    
+    
+        <label for="date"> Task Completion Date  <span style="font-size: 13px;"> (click on calender icon to select Date) </span></label>
+    
+        <input required type="date" name="date" id="newdate" class="mb-4"
+        
+        
+        />
+    
+        <label for="description"> Select Priority Level</label>
+    
+        <div class="input-group mb-4">
+    
+            <select class="custom-select" id="priority1"
+                style="background-color: #f1f1f1;border: none;height: 50px;">
+                <option disabled selected>  
+                    Select Priority Level
+                </option>
+                <option value="High">High </option>
+                <option value="Medium">Medium </option>
+                <option value="Low">Low</option>
+            </select>
+    
+        </div>
+    
+    
+        <label for="description"> Categorize Your Priority</label>
+    
+        <div class="input-group mb-4">
+    
+            <select class="custom-select" id="category1"
+                style="background-color: #f1f1f1;border: none;height: 50px;">
+                <option disabled selected> 
+                    Select Category
+                </option>
+                <option value="Work">Work </option>
+                <option value="Personal">Personal </option>
+                <option value="Shopping">Shopping</option>
+                <option value="Health">Health</option>
+    
+                
+            </select>
+        </div>
+        <input type="button" value="Add Task" id="addNewTaskBtn" class="mb-4"  />
+        <input type="button" value="Clear All" class='clearbtn' id="ClearAll"   />
+    </div>
+    
+ </div>
+
+
+    <h3 id="h3"></h3>
+    <span id="spanH3"></span>
+ 
+
+    <div style="display: flex;align-items: center;justify-content: center;">
+        <input type="search" id="searchTasks" class="searchTasks" placeholder="Search Task Title , Task Description" />
+        <span id="spanForSearch"></span>
+
+    </div>
+
+
+
+
+    <div>
+        <div id="taskList" class="mb-5" style="max-width: 900px;margin: 0 auto;display: grid;grid-template-columns: repeat(2,1fr);gap: 1em;">
+       
+        </div>
+    </div>
+    <div class="w-50">
+    
+    </div>
+    <!-- <div class="" id="taskList">
+
+
+
+      
+    </div> -->
+</body>
+<script src="app.js"></script>
+
+</html>
